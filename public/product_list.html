@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>产品详情页</title>
+	<link rel="stylesheet" href="product_list.css">
+	<link rel="stylesheet" href="header.css">
+</head>
+
+<body>
+	<!--  头部文件导入-->
+	<header id="headerin"></header>
+	<div id="main" data-link=''>
+		<!--浮窗，右侧签到，购物车，app ，top-->
+		<aside id="aside-right">
+			<ul class="aside-right-ul">
+				<li class="qiandao">
+					<a href="#">
+						<img src="img/aside/index.png"><br>
+					<span>签到</span>
+					</a>
+					<!--签到隐藏部分-->
+					<div class="d-none d-active">
+						<div class=""></div>
+						<!--小尖角-->
+						<a href="#">每日签到</a>
+						<a href="#">赢考拉豆</a>
+					</div>
+				</li>
+				<li class="s-car">
+					<a href="http://localhost:8080/shopping_car.html">
+						<!--<span class="num" id="num-car"></span>-->
+						<img src="img/aside/index1.png"><br> 购物车
+					</a>
+				</li>
+				<li class="APP1">
+					<a href="#"><img src="img/aside/index2.png"><br>APP</a>
+					<div class=" d-active">
+						<a href="#"><img src="img/aside/97.png"></a>
+					</div>
+				</li>
+				<li class="TOP1">
+					<a href="#"><img src="img/aside/index5.png"><br>TOP</a>
+				</li>
+			</ul>
+		</aside>
+
+		<!--  导航栏  -->
+		<ul class="nav w-1000">
+			<li><span>美容护肤&nbsp;>&nbsp;</span></li>
+			<li class="border">
+				<a href="#" class="hover">面部护肤</a>
+				<div class="ul-none">
+					<a href="#">面部清洁</a>
+					<a href="#">唇部护理</a>
+					<a href="#">眼部护理</a>
+					<a href="#">防晒修复</a>
+				</div>
+			</li>
+			<li><span>&nbsp;>&nbsp;</span></li>
+			<li class="border">
+				<a href="#" class="hover">爽肤水/化妆水</a>
+				<div class="ul-none ul-none2">
+					<a href="#">T区护理</a>
+					<a href="#">乳液/凝胶</a>
+					<a href="#">面部精华</a>
+					<a href="#">面膜/面膜粉</a>
+					<a href="#">面部按摩装</a>
+					<a href="#">面部护肤套装</a>
+				</div>
+			</li>
+			<li><span>&nbsp;>&nbsp;</span></li>
+			<li class="border">
+				<a href="#" class="hover">悦木之源</a>
+				<div class="ul-none ul-none3">
+					<a href="#">兰蔻</a>
+					<a href="#">科颜氏</a>
+					<a href="#">雅诗兰黛</a>
+					<a href="#">资生堂</a>
+					<a href="#">SK.II</a>
+					<a href="#">A.H.C</a>
+				</div>
+			</li>
+			<li><span>&nbsp;>&nbsp;</span></li>
+			<li class="last-li"><span>【陈柏霖同款】ORIGINS 悦木之源 灵芝焕能精华水 菌菇水 200毫升 靠它撑过烂脸期</span></li>
+		</ul>
+		<!--  产品介绍  -->
+		<div id="product" class="w-1000">
+			<!-- 左侧 大图  -->
+			<div class="l-img">
+				<div class="b-img active">
+					<img id="mimg" src="img/product_list/11.jpg" alt="">
+					<a href="javascript:;"></a>
+					<!--  鼠标滑过中图片时的黑色半透明-->
+					<div id="mask" class="d-none"></div>
+					<!--  中图片上面的遮罩层-->
+					<div id="super-mask"></div>
+				</div>
+				<!--  隐藏的两张  -->
+				<!--<div class="b-img">
+                <img src="img/product_list/111.jpg" alt="">
+                <a href="javascript:;"></a>
+           </div>
+		   <div class="b-img">
+                <img src="img/product_list/1111.jpg" alt="">
+                <a href="javascript:;"></a>
+           </div>-->
+				<!--   放大镜效果的大图 -->
+				<div id="div-lg" class="position-absolute d-none"></div>
+				<!--  三张小图和上下翻页  -->
+				<div class="s-img">
+					<!-- 上一张 -->
+					<div class="prve">
+						<a href="javascript:;" id="btn-left"></a>
+					</div>
+					<!--  三张小图 -->
+					<div class="aa">
+
+						<div id="ul-imgs" class="sm-img">
+							<img src="" alt="" style="display:none" id="img-sql">
+							<!--<div class="s-img1 all-simg">
+							<img src="img/product_list/581.jpg" alt="">
+						</div>
+						<div class="s-img2 all-simg">
+							<img src="img/product_list/582.jpg" alt="">
+						</div>
+						<div class="s-img3 all-simg">
+							<img src="img/product_list/583.jpg" alt="">
+						</div>-->
+						</div>
+					</div>
+
+
+					<!-- 下一张 -->
+					<div class="next">
+						<a href="javascript:;" id="btn-right"></a>
+					</div>
+				</div>
+			</div>
+			<!--  右侧产品价格，介绍内容  -->
+			<div class="r-con">
+				<div class="contry">
+					<span class="img1">
+					<img src="img/product_list/585.png" alt="">
+				</span>
+					<span class="tex">美国</span>
+					<span class="tex">|</span>
+					<a href="#"><span class="tex">ORIGINS 悦木之源</span></a>
+					<span class="img2 i-img1 tex">
+					 自营
+				</span>
+					<span class="img2 i-img tex">
+					跨境
+				</span>
+				</div>
+				<div class="title">
+					<span class="span1" id="title-sql">
+					【陈柏霖同款】ORIGINS 悦木之源 灵芝焕能精华水 菌菇水 200毫升 靠它撑过烂脸期
+				</span>
+				</div>
+				<div class="title">
+					<span class="span2" id="subtitle">
+					【新老包装随机发货】由内强化肌底，向外抵御环境侵害，深层修护受损肌底，强韧肌肤保护屏障，肌肤一天天改善，实现健康透亮
+				</span>
+				</div>
+				<!--  价格和套餐 -->
+				<div class="price">
+					<div class="pri">
+						<span class="span1">售价</span>
+						<span class="span2">新人价</span>
+						<span class="span3"><span>￥</span><span id="price-sql">189.00</span></span>
+						<span class="span1">考拉价</span>
+						<span class="span1 last">￥198.00</span>
+					</div>
+					<div class="heika">
+						<img src="img/product_list/1.png" alt="">
+						<span>黑卡会员预计可省<i>¥7.56元</i></span>
+						<div class="tishi">
+							<div class="yuan">!</div>
+							<div class="d-none">
+								<div class="jianjiao"></div>
+								<p class="p1">会员省钱明细</p>
+								<p class="p2 p1">
+									<span>会员9折</span>
+									<span class="m-r">省<i>¥7.56元</i></span>
+								</p>
+								<p class="p1 p3">
+									提示：可能会因为参加了其他优惠活动，导致会员省钱数遍地，具体一下但是为准
+								</p>
+							</div>
+						</div>
+						<div class="huiyuan">
+							<span>含会员96折</span>
+							<a href="#">立即开卡</a>
+							<!--  点击 立即开卡 弹出的弹框内容-->
+							<div id="alter-app">
+								<h1>
+									<span>开通会员</span>
+									<a href="#">
+									<img src="img/product_list/f.gif" alt="">
+								</a>
+								</h1>
+								<p class="p1">开通黑卡会员，尊享黑卡16大权益，此单立省7.56元</p>
+								<img src="img/product_list/55.png" alt="">
+								<p class="p3">扫一扫，开通黑卡</p>
+								<button>确认</button>
+							</div>
+						</div>
+
+					</div>
+					<!--  更多组合  -->
+					<div class="zuhe">
+						<span class="span1">
+						更多组合
+					</span>
+						<span class="one">1件装|单件189元</span>
+						<a href="#" class="one two">2件装|单件187.5元</a>
+					</div>
+
+					<div class="quan">
+						<img src="img/product_list/586.png" alt="">
+						<span class="m-l-5">先领每满259元减25优惠券，再下单</span>
+						<span class="c-blue">点击领取</span>
+						<span class="m-l-86">全部<span>2</span>张优惠券</span>
+						<!--  鼠标滑过时显示出来 -->
+						<div class="d-none1">
+							<table></table>
+							<img src="img/product_list/70.png" alt="">
+							<span class="m-l-5">先领每满499元减50优惠券，再下单</span>
+							<span class="c-blue">点击领取</span>
+						</div>
+					</div>
+
+
+				</div>
+				<!--  活动  -->
+				<div class="huodong">
+					<span class="span11">活动</span>
+					<span class="bgc-r">换购</span>
+					<a href="#">满1元可换购商品</a>&nbsp;&nbsp;
+					<a href="#">点击凑单></a>
+				</div>
+				<!--  税费  -->
+				<div class="shuifei">
+					<span class="span11">税费</span>
+					<span class="spans">预估￥17.75，实际税费请以提交订单时为准</span>
+				</div>
+				<!--  数量  -->
+				<div class="num">
+					<span class="span11">数量</span>
+					<button class="jian">-</button>
+					<input type="text" id="count" value="1">
+					<button class="jia">+</button>
+				</div>
+				<!--  立即购买 -->
+				<!--    加入购物车 -->
+				<div class="shop">
+					<button class="shopping">立即购买</button>
+					<button class="car" id="btn_car">加入购物车</button>
+				</div>
+			</div>
+
+		</div>
+		<!--  相关推荐 -->
+		<div class="recommend w-1000">
+			<h4>相关推荐</h4>
+			<div class="product">
+				<!--  推荐产品1  -->
+				<div class="product-list float-l">
+					<a href="#">
+					<img src="img/product_list/15.jpg" alt="" title="ESTĒE LAUDER 雅诗兰黛小棕瓶面部精华 特润修护肌透精华露 50毫升">
+				</a>
+					<a href="#" class="tex" title="ESTĒE LAUDER 雅诗兰黛小棕瓶面部精华 特润修护肌透精华露 50毫升">
+					ESTĒE LAUDER 雅诗兰黛小棕瓶面部精华 特润修
+				</a>
+					<p>
+						<span class="c-red">¥529</span>
+						<span class="tex-">¥850</span>
+					</p>
+					<a href="#" class="appraise"> 37822 人已评价</a>
+				</div>
+				<!--  推荐产品2 -->
+				<div class="product-list float-l">
+					<a href="#">
+					<img src="img/product_list/13.jpg" alt="" title="CLINIQUE 倩碧 卓越润肤啫喱 无油黄油 125毫升 天才黄油">
+				</a>
+					<a href="#" class="tex" title="CLINIQUE 倩碧 卓越润肤啫喱 无油黄油 125毫升 天才黄油">
+					CLINIQUE 倩碧 卓越润肤啫喱 无油黄油 125毫升 天才黄油
+				</a>
+					<p>
+						<span class="c-red">¥169</span>
+						<span class="tex-">¥290</span>
+					</p>
+					<a href="#" class="appraise"> 36915 人已评价</a>
+				</div>
+				<!--  推荐产品3 -->
+				<div class="product-list float-l">
+					<a href="#">
+					<img src="img/product_list/45.jpg" alt="" title="2件装 | ORIGINS 悦木之源 灵芝焕能精华水 菌菇水 200毫升 痘肌敏感肌必备">
+				</a>
+					<a href="#" class="tex" title="2件装 | ORIGINS 悦木之源 灵芝焕能精华水 菌菇水 200毫升 痘肌敏感肌必备">
+					C2件装 | ORIGINS 悦木之源 灵芝焕能精华水 菌菇水 200毫升 痘肌敏感肌必备
+				</a>
+					<p>
+						<span class="c-red">¥375</span>
+						<span class="tex-">¥640</span>
+					</p>
+					<a href="#" class="appraise"> 22481 人已评价</a>
+				</div>
+				<!--  推荐产品4 -->
+				<div class="product-list float-l">
+					<a href="#">
+					<img src="img/product_list/12.jpg" alt="" title="2件装 | ORIGINS 悦木之源 灵芝焕能精华水 菌菇水 200毫升 痘肌敏感肌必备">
+				</a>
+					<a href="#" class="tex" title="2件装 | ORIGINS 悦木之源 灵芝焕能精华水 菌菇水 200毫升 痘肌敏感肌必备">
+					C2件装 | ORIGINS 悦木之源 灵芝焕能精华水 菌菇水 200毫升 痘肌敏感肌必备
+				</a>
+					<p>
+						<span class="c-red">¥375</span>
+						<span class="tex-">¥640</span>
+					</p>
+					<a href="#" class="appraise"> 22481 人已评价</a>
+				</div>
+				<!--  推荐产品5 -->
+				<div class="product-list float-l">
+					<a href="#">
+					<img src="img/product_list/16.jpg" alt="" title="LANCÔME 兰蔻 玫瑰露清滢柔肤粉水 400毫升 干皮真爱s">
+				</a>
+					<a href="#" class="tex" title="LANCÔME 兰蔻 玫瑰露清滢柔肤粉水 400毫升 干皮真爱">
+					LANCÔME 兰蔻 玫瑰露清滢柔肤粉水 400毫升 干皮真爱
+				</a>
+					<p>
+						<span class="c-red">¥319</span>
+						<span class="tex-">¥420</span>
+					</p>
+					<a href="#" class="appraise"> 19658人已评价</a>
+				</div>
+				<!--  推荐产品6 -->
+				<div class="product-list float-l">
+					<a href="#">
+					<img src="img/product_list/18.jpg" alt="" title="【痘肌敏感肌必备】【限时包邮】ORIGINS 悦木之源 灵芝焕能精华水 菌菇水 200毫升">
+				</a>
+					<a href="#" class="tex" title="【痘肌敏感肌必备】【限时包邮】ORIGINS 悦木之源 灵芝焕能精华水 菌菇水 200毫升">
+					【痘肌敏感肌必备】【限时包邮】ORIGINS 悦木之源 灵芝焕能精华水 菌菇水 200毫升
+				</a>
+					<p>
+						<span class="c-red">¥195</span>
+						<span class="tex-">¥350</span>
+					</p>
+					<a href="#" class="appraise"> 94人已评价</a>
+				</div>
+			</div>
+		</div>
+		<!--  主题内容 -->
+		<div class="w-1000 main">
+			<div class="main-left">
+				<!--  看了又看  -->
+				<div class="recommend1 ">
+					<h4>看了又看</h4>
+					<div class="product">
+						<!--  推荐产品1  -->
+						<div class="product-list">
+							<a href="#">
+							<img src="img/product_list/15.jpg" alt="" title="ESTĒE LAUDER 雅诗兰黛小棕瓶面部精华 特润修护肌透精华露 50毫升">
+						</a>
+							<a href="#" class="tex" title="ESTĒE LAUDER 雅诗兰黛小棕瓶面部精华 特润修护肌透精华露 50毫升">
+							ESTĒE LAUDER 雅诗兰黛小棕瓶面部精华 特润修
+						</a>
+							<p>
+								<span class="c-red">¥529</span>
+								<span class="tex-">¥850</span>
+							</p>
+							<a href="#" class="appraise"> 37822 人已评价</a>
+						</div>
+						<!--  推荐产品2 -->
+						<div class="product-list">
+							<a href="#">
+							<img src="img/product_list/13.jpg" alt="" title="CLINIQUE 倩碧 卓越润肤啫喱 无油黄油 125毫升 天才黄油">
+						</a>
+							<a href="#" class="tex" title="CLINIQUE 倩碧 卓越润肤啫喱 无油黄油 125毫升 天才黄油">
+							CLINIQUE 倩碧 卓越润肤啫喱 无油黄油 125毫升 天才黄油
+						</a>
+							<p>
+								<span class="c-red">¥169</span>
+								<span class="tex-">¥290</span>
+							</p>
+							<a href="#" class="appraise"> 36915 人已评价</a>
+						</div>
+						<!--  推荐产品3 -->
+						<div class="product-list ">
+							<a href="#">
+							<img src="img/product_list/45.jpg" alt="" title="2件装 | ORIGINS 悦木之源 灵芝焕能精华水 菌菇水 200毫升 痘肌敏感肌必备">
+						</a>
+							<a href="#" class="tex" title="2件装 | ORIGINS 悦木之源 灵芝焕能精华水 菌菇水 200毫升 痘肌敏感肌必备">
+							C2件装 | ORIGINS 悦木之源 灵芝焕能精华水 菌菇水 200毫升 痘肌敏感肌必备
+						</a>
+							<p>
+								<span class="c-red">¥375</span>
+								<span class="tex-">¥640</span>
+							</p>
+							<a href="#" class="appraise"> 22481 人已评价</a>
+						</div>
+						<!--  推荐产品4 -->
+						<div class="product-list ">
+							<a href="#">
+							<img src="img/product_list/12.jpg" alt="" title="2件装 | ORIGINS 悦木之源 灵芝焕能精华水 菌菇水 200毫升 痘肌敏感肌必备">
+						</a>
+							<a href="#" class="tex" title="2件装 | ORIGINS 悦木之源 灵芝焕能精华水 菌菇水 200毫升 痘肌敏感肌必备">
+							C2件装 | ORIGINS 悦木之源 灵芝焕能精华水 菌菇水 200毫升 痘肌敏感肌必备
+						</a>
+							<p>
+								<span class="c-red">¥375</span>
+								<span class="tex-">¥640</span>
+							</p>
+							<a href="#" class="appraise"> 22481 人已评价</a>
+						</div>
+						<!--  推荐产品5 -->
+						<div class="product-list ">
+							<a href="#">
+							<img src="img/product_list/16.jpg" alt="" title="LANCÔME 兰蔻 玫瑰露清滢柔肤粉水 400毫升 干皮真爱s">
+						</a>
+							<a href="#" class="tex" title="LANCÔME 兰蔻 玫瑰露清滢柔肤粉水 400毫升 干皮真爱">
+							LANCÔME 兰蔻 玫瑰露清滢柔肤粉水 400毫升 干皮真爱
+						</a>
+							<p>
+								<span class="c-red">¥319</span>
+								<span class="tex-">¥420</span>
+							</p>
+							<a href="#" class="appraise"> 19658人已评价</a>
+						</div>
+						<!--  推荐产品6 -->
+						<div class="product-list product-list6 float-l">
+							<a href="#">
+							<img src="img/product_list/18.jpg" alt="" title="【痘肌敏感肌必备】【限时包邮】ORIGINS 悦木之源 灵芝焕能精华水 菌菇水 200毫升">
+						</a>
+							<a href="#" class="tex" title="【痘肌敏感肌必备】【限时包邮】ORIGINS 悦木之源 灵芝焕能精华水 菌菇水 200毫升">
+							【痘肌敏感肌必备】【限时包邮】ORIGINS 悦木之源 灵芝焕能精华水 菌菇水 200毫升
+						</a>
+							<p>
+								<span class="c-red">¥195</span>
+								<span class="tex-">¥350</span>
+							</p>
+							<a href="#" class="appraise"> 94人已评价</a>
+						</div>
+					</div>
+				</div>
+
+				<!--  看了最终买  -->
+				<div class="recommend1 ">
+					<h4>看了最终买</h4>
+					<div class="product">
+						<!--  推荐产品1  -->
+						<div class="product-list">
+							<a href="#">
+							<img src="img/product_list/15.jpg" alt="" title="ESTĒE LAUDER 雅诗兰黛小棕瓶面部精华 特润修护肌透精华露 50毫升">
+						</a>
+							<a href="#" class="tex" title="ESTĒE LAUDER 雅诗兰黛小棕瓶面部精华 特润修护肌透精华露 50毫升">
+							ESTĒE LAUDER 雅诗兰黛小棕瓶面部精华 特润修
+						</a>
+							<p>
+								<span class="c-red">¥529</span>
+								<span class="tex-">¥850</span>
+							</p>
+							<a href="#" class="appraise"> 37822 人已评价</a>
+						</div>
+						<!--  推荐产品2 -->
+						<div class="product-list">
+							<a href="#">
+							<img src="img/product_list/13.jpg" alt="" title="CLINIQUE 倩碧 卓越润肤啫喱 无油黄油 125毫升 天才黄油">
+						</a>
+							<a href="#" class="tex" title="CLINIQUE 倩碧 卓越润肤啫喱 无油黄油 125毫升 天才黄油">
+							CLINIQUE 倩碧 卓越润肤啫喱 无油黄油 125毫升 天才黄油
+						</a>
+							<p>
+								<span class="c-red">¥169</span>
+								<span class="tex-">¥290</span>
+							</p>
+							<a href="#" class="appraise"> 36915 人已评价</a>
+						</div>
+						<!--  推荐产品3 -->
+						<div class="product-list ">
+							<a href="#">
+							<img src="img/product_list/45.jpg" alt="" title="2件装 | ORIGINS 悦木之源 灵芝焕能精华水 菌菇水 200毫升 痘肌敏感肌必备">
+						</a>
+							<a href="#" class="tex" title="2件装 | ORIGINS 悦木之源 灵芝焕能精华水 菌菇水 200毫升 痘肌敏感肌必备">
+							C2件装 | ORIGINS 悦木之源 灵芝焕能精华水 菌菇水 200毫升 痘肌敏感肌必备
+						</a>
+							<p>
+								<span class="c-red">¥375</span>
+								<span class="tex-">¥640</span>
+							</p>
+							<a href="#" class="appraise"> 22481 人已评价</a>
+						</div>
+						<!--  推荐产品4 -->
+						<div class="product-list ">
+							<a href="#">
+							<img src="img/product_list/12.jpg" alt="" title="2件装 | ORIGINS 悦木之源 灵芝焕能精华水 菌菇水 200毫升 痘肌敏感肌必备">
+						</a>
+							<a href="#" class="tex" title="2件装 | ORIGINS 悦木之源 灵芝焕能精华水 菌菇水 200毫升 痘肌敏感肌必备">
+							C2件装 | ORIGINS 悦木之源 灵芝焕能精华水 菌菇水 200毫升 痘肌敏感肌必备
+						</a>
+							<p>
+								<span class="c-red">¥375</span>
+								<span class="tex-">¥640</span>
+							</p>
+							<a href="#" class="appraise"> 22481 人已评价</a>
+						</div>
+						<!--  推荐产品5 -->
+						<div class="product-list ">
+							<a href="#">
+							<img src="img/product_list/16.jpg" alt="" title="LANCÔME 兰蔻 玫瑰露清滢柔肤粉水 400毫升 干皮真爱s">
+						</a>
+							<a href="#" class="tex" title="LANCÔME 兰蔻 玫瑰露清滢柔肤粉水 400毫升 干皮真爱">
+							LANCÔME 兰蔻 玫瑰露清滢柔肤粉水 400毫升 干皮真爱
+						</a>
+							<p>
+								float_top <span class="c-red">¥319</span>
+								<span class="tex-">¥420</span>
+							</p>
+							<a href="#" class="appraise"> 19658人已评价</a>
+						</div>
+						<!--  推荐产品6 -->
+						<div class="product-list product-list6 float-l">
+							<a href="#">
+							<img src="img/product_list/18.jpg" alt="" title="【痘肌敏感肌必备】【限时包邮】ORIGINS 悦木之源 灵芝焕能精华水 菌菇水 200毫升">
+						</a>
+							<a href="#" class="tex" title="【痘肌敏感肌必备】【限时包邮】ORIGINS 悦木之源 灵芝焕能精华水 菌菇水 200毫升">
+							【痘肌敏感肌必备】【限时包邮】ORIGINS 悦木之源 灵芝焕能精华水 菌菇水 200毫升
+						</a>
+							<p>
+								<span class="c-red">¥195</span>
+								<span class="tex-">¥350</span>
+							</p>
+							<a href="#" class="appraise"> 94人已评价</a>
+						</div>
+					</div>
+				</div>
+
+				<!--  热销排行榜  -->
+				<div class="recommend1 hot ">
+					<h4>热销排行榜</h4>
+					<div class="product">
+						<!--  推荐产品1  -->
+						<div class="product-list pos-re">
+							<span>1</span>
+							<a href="#">
+							<img src="img/product_list/588.jpg" alt="" title="【杜鹃力荐 毛孔收敛神器】城野医生 毛孔细致收敛水 100ml 清洁收敛毛孔">
+						</a>
+							<a href="#" class="tex" title="【杜鹃力荐 毛孔收敛神器】城野医生 毛孔细致收敛水 100ml 清洁收敛毛孔">
+							【杜鹃力荐 毛孔收敛神器】城野医生 毛孔细致收敛水 100ml 清洁收敛毛孔
+						</a>
+							<p>
+								<span class="c-red">¥79</span>
+								<span class="tex-">¥159</span>
+							</p>
+							<a href="#" class="appraise"> 55287 人已评价</a>
+						</div>
+						<!--  推荐产品2 -->
+						<div class="product-list pos-re">
+							<span class="all-span">2</span>
+							<a href="javascript:;">
+							<img src="img/product_list/589.jpg" alt="" title="【便宜大碗】Naturie imju 薏仁亮白保湿防晒化妆水 500毫升">
+						</a>
+							<a href="javascript:;" class="tex" title="【便宜大碗】Naturie imju 薏仁亮白保湿防晒化妆水 500毫升">
+							【便宜大碗】Naturie imju 薏仁亮白保湿防晒化妆水 500毫升
+						</a>
+							<p>
+								<span class="c-red">¥55</span>
+								<span class="tex-">¥105</span>
+							</p>
+							<a href="javascript:;" class="appraise"> 98994 人已评价</a>
+						</div>
+						<!--  推荐产品3 -->
+						<div class="product-list pos-re">
+							<span class="all-span">3</span>
+							<a href="javascript:;">
+							<img src="img/product_list/590.jpg" alt="" title="【清爽不粘腻 敏感肌最爱】MUJI 无印良品 基础润肤化妆水">
+						</a>
+							<a href="javascript:;" class="tex" title="【清爽不粘腻 敏感肌最爱】MUJI 无印良品 基础润肤化妆水">
+							【清爽不粘腻 敏感肌最爱】MUJI 无印良品 基础润肤化妆水
+						</a>
+							<p>
+								<span class="c-red">¥65</span>
+								<span class="tex-">¥109</span>
+							</p>
+							<a href="javascript:;" class="appraise"> 90128 人已评价</a>
+						</div>
+						<!--  推荐产品4 -->
+						<div class="product-list pos-re">
+							<span class="all-span">4</span>
+							<a href="javascript:;">
+							<img src="img/product_list/16.jpg" alt="" title="LANCÔME 兰蔻 玫瑰露清滢柔肤粉水 400毫升 干皮真爱">
+						</a>
+							<a href="javascript:;" class="tex" title="LANCÔME 兰蔻 玫瑰露清滢柔肤粉水 400毫升 干皮真爱">
+							LANCÔME 兰蔻 玫瑰露清滢柔肤粉水 400毫升 干皮真爱
+						</a>
+							<p>
+								<span class="c-red">¥319</span>
+								<span class="tex-">¥420</span>
+							</p>
+							<a href="javascript:;" class="appraise"> 1358 人已评价</a>
+						</div>
+						<!--  推荐产品5 -->
+						<div class="product-list pos-re">
+							<span class="all-span">5</span>
+							<a href="javascript:;">
+							<img src="img/product_list/591.jpg" alt="" title="SK-II Pitera青春露 神仙水 330毫升">
+						</a>
+							<a href="javascript:;" class="tex" title="SK-II Pitera青春露 神仙水 330毫升">
+							SK-II Pitera青春露 神仙水 330毫升
+						</a>
+							<p>
+								<span class="c-red">¥1569</span>
+								<span class="tex-">¥1980</span>
+							</p>
+							<a href="javascript:;" class="appraise"> 27485人已评价</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--  右侧产品详细介绍  -->
+			<div id="right">
+				<!--  商品详情 -->
+				<div class="main-product" id="main-product">
+					<div class="p-nav" id="float_none">
+						<a href="#main-product" class="tex-red all-a">
+						商品详情
+					</a>
+						<a href="#main-rate" class=" black all-a">
+						用户评价<span>17455</span>
+					</a>
+						<!--  手机购买  -->
+						<div class="ph-shop">
+							<span class="tex" alt="">
+							手机购买
+						</span>
+							<span class="bag-img img1"></span>
+							<p>
+								<img src="img/product_list/568.png" alt="">
+								<img src="img/product_list/d1.png" alt="" class="c-c">
+							</p>
+
+						</div>
+					</div>
+					<!--/* 固定在顶部的浮窗  购物车  */-->
+					<div class="p-nav" id="float_top">
+						<a href="#main-product" class="tex-red all-a">
+						商品详情
+					</a>
+						<a href="#main-rate" class=" black all-a">
+						用户评价<span>17455</span>
+					</a>
+						<!--  手机购买  -->
+						<div class="ph-shop">
+							<span class="tex" alt="">
+							手机购买
+						</span>
+							<span class="bag-img img1"></span>
+							<p>
+								<img src="img/product_list/568.png" alt="">
+								<img src="img/product_list/d1.png" alt="" class="c-c">
+							</p>
+
+						</div>
+						<button class="car">加入购物车</button>
+					</div>
+					<!--  产品信息  -->
+					<h4 class="products">产品信息</h4>
+					<!--  失效日期  -->
+					<div class="date">
+						<div class="d-date d-date2">
+							<div class="c9-f14">失效日期</div>
+							<div class="c3-f14">
+								2021年01月01日——2021年07月02日，具体日期以实际发货批次为准
+							</div>
+						</div>
+						<!--  保质期  -->
+						<div class="d-date d-date1">
+							<div class="c9-f14">保质期</div>
+							<div class="c3-f14 div1">
+								1095天
+							</div>
+						</div>
+					</div>
+
+					<!--  关键属性  -->
+					<h4 class="products m-t-0">关键属性</h4>
+					<!--  功能    适合肤质-->
+					<div class="date bor-bot">
+						<div class="d-date d-date2">
+							<div class="c9-f14">功能</div>
+							<div class="c3-f14 div1">
+								舒缓护肤 滋润
+							</div>
+						</div>
+						<!--  适合肤质  -->
+						<div class="d-date d-date1">
+							<div class="c9-f14">适合肤质</div>
+							<div class="c3-f14 div1">
+								任何肤质
+							</div>
+						</div>
+					</div>
+					<!--  产品类型  -->
+					<div class="date bor-bot">
+						<div class="d-date d-date2">
+							<div class="c9-f14"> 产品类型</div>
+							<div class="c3-f14 div1">
+								精华水
+							</div>
+						</div>
+					</div>
+					<!--    其他属性  -->
+					<h4 class="other ">其他属性</h4>
+					<!--  收起和展开-->
+					<div class="open" id="open">展开</div>
+					<!--需要展开的内容-->
+					<div class="close" id="close">
+						<div class="date bor-bot">
+							<div class="d-date d-date2">
+								<div class="c9-f14">适用部位</div>
+								<div class="c3-f14 div1">面部</div>
+							</div>
+							<!--  适合肤质  -->
+							<div class="d-date d-date1">
+								<div class="c9-f14">适用群体</div>
+								<div class="c3-f14 div1">女</div>
+							</div>
+						</div>
+						<div class="date bor-bot">
+							<div class="d-date d-date2">
+								<div class="c9-f14">质地</div>
+								<div class="c3-f14 div1">液体</div>
+							</div>
+							<!--  适合肤质  -->
+							<div class="d-date d-date1">
+								<div class="c9-f14">品名</div>
+								<div class="c3-f14 div1">灵芝焕能精华水 菌菇水</div>
+							</div>
+						</div>
+						<div class="date bor-bot">
+							<div class="d-date d-date2">
+								<div class="c9-f14"> 产地</div>
+								<div class="c3-f14 div1">以实物产品包装显示内容为准</div>
+							</div>
+						</div>
+						<div class="open" id="hide">收起</div>
+					</div>
+					<!-- 真 -->
+					<div class="ture">
+						<div class="bor-ridu">真</div>
+						<div class="tex-p">
+							<p class="tex1">正品保障</p>
+							<p class="tex2">网易考拉每一件商品都通过严苛的品质把关，保障正品，保障品质。杜绝一切假货，让您无忧购物。</p>
+						</div>
+					</div>
+					<!--  商品详细大图  -->
+					<div class="b-img">
+						<div>
+							<img src="img/product_list/21.jpg" alt="">
+						</div>
+						<div>
+							<img src="img/product_list/22.jpg" alt="">
+						</div>
+						<div>
+							<img src="img/product_list/23.jpg" alt="">
+						</div>
+						<div>
+							<img src="img/product_list/24.jpg" alt="">
+						</div>
+						<div>
+							<img src="img/product_list/25.jpg" alt="">
+						</div>
+						<div>
+							<img src="img/product_list/26.jpg" alt="">
+						</div>
+						<div>
+							<img src="img/product_list/27.jpg" alt="">
+						</div>
+						<div>
+							<img src="img/product_list/28.jpg" alt="">
+						</div>
+						<div>
+							<img src="img/product_list/999.jpg" alt="">
+						</div>
+
+					</div>
+					<!--  包装与生产日期  价格说明   消费者告知书 -->
+					<div class="text-cont">
+						<h4>包装与生产日期</h4>
+						<p>
+							商品的包装，国外更注重环保和便捷性，而不是包装如何奢华。大部分国际一线品牌， 奢侈品的包装也很简单，比如产自欧美，日韩的化妆品，大部分无外盒，不塑封，开口处也没有封口贴。
+						</p>
+						<p></p>
+						<p>
+							国外的商品包装上一般不会单独列出保质期多长，通常只在产品包装上标注生产日期或有效日期， 也有只标注出厂批号的情况：比如日本和欧洲的洗护品，化妆品（有些品牌可以根据批号读取日期， 在此不做一一列举）。但请放心，网易考拉销售的国外商品都是符合规定的合格产品。有些喷印的日期，
+							在运输过程中因为摩擦碰撞很容易糊掉或碰掉，是正常现象。
+						</p>
+						<p class="last">
+							各国商品有效期的书写方式，可在考拉pc页面底部-新手指南-常见问题中查看详情。<br/> 国外食品一般表示"Best before date"，既最佳赏味日期。该日期不是"最终保质期"， 意为在此日期前食用能保证食物新鲜，故在"最佳赏味日期"前食用风味更佳。
+						</p>
+					</div>
+
+				</div>
+
+				<!--  用户评价  -->
+				<div class="main-rate" id="main-rate">
+					<div class="top">
+						<div class="f-l">
+							<span class="f22-b">97.1</span>
+							<span class="f-13">%好评</span>
+						</div>
+						<div class="f-r">
+							<p>评价送考拉豆</p>
+							<p>精华评价可获得40考拉豆</p>
+							<a href="javascript:;">发表评价</a>
+							<span>|</span>
+							<a href="javascript:;">考拉豆说明</a>
+						</div>
+					</div>
+					<ul class="input">
+						<li>
+							<a href="javascript:;" class="red">
+							<input type="radio" id="tex" >
+							<label for="tex">
+								全部17583
+							</label>
+						</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+							<input type="radio" id="tex1" >
+							<label for="tex1">
+								有图2100
+							</label>
+						</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+							<input type="radio" id="tex2" >
+							<label for="tex2">
+								有追评209
+							</label>
+						</a>
+						</li>
+						<li class="last">
+							<a href="javascript:;">
+							<input type="checkbox" id="tex3" >
+							<label for="tex3">
+								只看当前商品评价
+							</label>
+						</a>
+							<a href="javascript:;">
+							查看所有评价
+						</a>
+						</li>
+
+
+
+					</ul>
+					<!--  评价内容区域  -->
+					<div class="user">
+						<div class="head">
+							<img src="img/product_list/1.jpeg" alt="">
+						</div>
+						<div class="zan">
+							<a href="javascript:;">
+							<img src="img/product_list/412.png" alt="">
+							<span class="zan_num">7</span>
+						</a>
+							<p><a href="javascript:;">来自iOS手机版</a></p>
+							<p>05.18</p>
+						</div>
+						<p class="text-con">
+							<span class="c-w">精华评价</span>
+							<span>
+							这个味道特别熟悉特别喜欢。
+							不知道是不是心理作用，敷在脸上感觉很治愈，昨晚用了一晚上，感觉痘痘确实小了。
+							我是下颌处频繁长痘痘，根据多年来我的战痘经验，祛痘一定要内外兼修。
+							不建议和中药，我喝过，一点用都没有。
+							内在我是吃挪威三倍鱼油+澳洲月见草，台湾医美教授给我的私教，
+							真的有用，不用谢我🤫对外我就Annabella补水面膜+菌菇水+澳洲茶树祛痘凝胶+
+							精华+乳液。平时洗脸一定要热敷，这样才能洗干净，尤其对于我们这些毛孔大，
+							有油脂粒有闭口的宝宝。另外有痘痘的不要用油性太大的乳液。
+							我用的精华也不是特别浓稠的那种。总之早上起床千万别出现大油脸就行。
+							以后再介绍乳液精华的选择吧。
+						</span>
+						</p>
+					</div>
+					<div class="user">
+						<div class="head">
+							<img src="img/product_list/1.jpeg" alt="">
+						</div>
+						<div class="zan">
+							<a href="javascript:;">
+							<img src="img/product_list/412.png" alt="">
+							<span class="zan_num">17</span>
+						</a>
+							<p><a href="javascript:;">来自iOS手机版</a></p>
+							<p>05.18</p>
+						</div>
+						<p class="text-con">
+							<span class="c-w">精华评价</span>
+							<span>
+							这个味道特别熟悉特别喜欢。
+							不知道是不是心理作用，敷在脸上感觉很治愈，昨晚用了一晚上，感觉痘痘确实小了。
+							我是下颌处频繁长痘痘，根据多年来我的战痘经验，祛痘一定要内外兼修。
+							不建议和中药，我喝过，一点用都没有。
+							内在我是吃挪威三倍鱼油+澳洲月见草，台湾医美教授给我的私教，
+							真的有用，不用谢我🤫对外我就Annabella补水面膜+菌菇水+澳洲茶树祛痘凝胶+
+							精华+乳液。平时洗脸一定要热敷，这样才能洗干净，尤其对于我们这些毛孔大，
+							有油脂粒有闭口的宝宝。另外有痘痘的不要用油性太大的乳液。
+							我用的精华也不是特别浓稠的那种。总之早上起床千万别出现大油脸就行。
+							以后再介绍乳液精华的选择吧。
+						</span>
+						</p>
+					</div>
+					<!--  评论区上下翻页  -->
+					<ul class="pagination">
+						<li class="disabled page-item">
+							<a href="javascript:;" class="page-link">
+								<<上一页</a>
+						</li>
+						<li class="active page-item">
+							<a href="javascript:;" class="page-link active">1</a>
+						</li>
+						<li class="page-item ">
+							<a href="javascript:;" class="page-link ">2</a>
+						</li>
+						<li class="page-item ">
+							<a href="javascript:;" class="page-link ">3</a>
+						</li>
+						<li class="page-item ">
+							<a href="javascript:;" class="page-link ">...</a>
+						</li>
+						<li class="page-item">
+							<a href="javascript:;" class="page-link">下一页>></a>
+						</li>
+					</ul>
+				</div>
+
+				<!--   猜你喜欢  -->
+				<div class="ylike">
+					<h4 class="ylike-title">
+						猜你喜欢
+						<span>根据你的浏览记录推荐的商品</span>
+					</h4>
+					<div class="product producta">
+
+						<div class="product-list float-l">
+							<a href="javascript:;">
+							<img src="img/product_list/82.jpg" alt="" title="innisfree 悦诗风吟 矿物质遮瑕定妆薄荷散粉 5克 2罐">
+						</a>
+							<a href="javascript:;" class="tex" title="innisfree 悦诗风吟 矿物质遮瑕定妆薄荷散粉 5克 2罐">
+							innisfree 悦诗风吟 矿物质遮瑕定妆薄荷散粉 5克 2罐
+						</a>
+							<p>
+								<span class="c-red">¥529</span>
+								<span class="tex-">¥850</span>
+							</p>
+							<a href="javascript:;" class="appraise"> 37822 人已评价</a>
+						</div>
+						<div class="product-list float-l">
+							<a href="javascript:;">
+							<img src="img/product_list/82.jpg" alt="" title="innisfree 悦诗风吟 矿物质遮瑕定妆薄荷散粉 5克 2罐">
+						</a>
+							<a href="javascript:;" class="tex" title="innisfree 悦诗风吟 矿物质遮瑕定妆薄荷散粉 5克 2罐">
+							innisfree 悦诗风吟 矿物质遮瑕定妆薄荷散粉 5克 2罐
+						</a>
+							<p>
+								<span class="c-red">¥529</span>
+								<span class="tex-">¥850</span>
+							</p>
+							<a href="javascript:;" class="appraise"> 37822 人已评价</a>
+						</div>
+						<div class="product-list float-l">
+							<a href="javascript:;">
+							<img src="img/product_list/82.jpg" alt="" title="innisfree 悦诗风吟 矿物质遮瑕定妆薄荷散粉 5克 2罐">
+						</a>
+							<a href="javascript:;" class="tex" title="innisfree 悦诗风吟 矿物质遮瑕定妆薄荷散粉 5克 2罐">
+							innisfree 悦诗风吟 矿物质遮瑕定妆薄荷散粉 5克 2罐
+						</a>
+							<p>
+								<span class="c-red">¥529</span>
+								<span class="tex-">¥850</span>
+							</p>
+							<a href="javascript:;" class="appraise"> 37822 人已评价</a>
+						</div>
+						<div class="product-list float-l">
+							<a href="javascript:;">
+							<img src="img/product_list/82.jpg" alt="" title="innisfree 悦诗风吟 矿物质遮瑕定妆薄荷散粉 5克 2罐">
+						</a>
+							<a href="javascript:;" class="tex" title="innisfree 悦诗风吟 矿物质遮瑕定妆薄荷散粉 5克 2罐">
+							innisfree 悦诗风吟 矿物质遮瑕定妆薄荷散粉 5克 2罐
+						</a>
+							<p>
+								<span class="c-red">¥529</span>
+								<span class="tex-">¥850</span>
+							</p>
+							<a href="javascript:;" class="appraise"> 37822 人已评价</a>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<footer> </footer>
+	<script src="JS/jquery-1.11.3.js"></script>
+	<script src="JS/header.js">
+	</script>
+	<script src="JS/product_list.js"></script>
+	<!--<script src="JS/login.js"></script>		-->
+	<script src="JS/footer.js">
+	</script>
+</body>
+
+</html>

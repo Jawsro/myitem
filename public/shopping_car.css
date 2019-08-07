@@ -1,0 +1,127 @@
+*{
+    margin: 0;padding: 0
+}
+ul>li{
+    list-style: none;
+}
+input{
+    outline: none;
+}
+a{
+    text-decoration: none;
+}
+.font-co{
+    font-size: 12px;
+    color: #333;
+}
+/*购物车*/
+.car {
+    width: 1000px;
+    margin: 0 auto;
+}
+.car li{
+    width:1000px;
+    height:120px;
+    overflow: hidden;
+    border:1px dashed #333;
+}
+.car li>div{
+    height:80px;
+    float: left;
+    margin: 20px 0px 20px 20px;
+}
+.btn{
+    display: inline-block;
+    width:17px;
+    height:18px;
+    background: url("img/11.png") no-repeat 0 0;
+    background-position: 0px 0px;
+    font-size: 14px;
+    margin:31px 5px 0;
+}
+.car .col{
+    margin-bottom: 0px;
+}
+.car .col1{
+    margin-left: -6px;
+    width: 510px;
+}
+.col1>img{
+    width: 80px;
+    height: 80px;
+}
+.col1 span{
+    display: inline-block;
+    width: 32px;height: 16px;line-height: 16px;text-align: center;
+    font-size: 12px;
+    color: #e31436;
+    border: 1px solid #e31436;
+    border-radius: 2px;
+    margin-right: 3px;position: relative;
+    top: -36px;
+}
+.col1 .red{
+    display: inline-block;
+    position: relative;
+    top:-36px;
+}
+.col1 .red:hover{
+    color: red;
+}
+.car .price{
+    font-size: 14px;
+    color: #333;
+    font-weight: 700;
+    line-height: 80px;
+    margin-left: -1px;
+    padding: 0 10px;width: 88px;
+}
+.car .botton{
+    margin-left: -1px; 
+}
+.car .botton>button{
+    display: inline-block;
+    height: 25px;
+    width: 20px;
+    border: 1px solid #bcbcbc;
+    background-color: white;
+     margin-top: 10px;
+}
+.car .botton>span{
+    display: inline-block;
+    width: 43px;
+    height: 23px;
+    border: 1px solid #bcbcbc;border-left: none;
+    border-right: none;
+    text-align: center;
+    line-height: 22px;
+    margin-left: -6px;
+    margin-right: -6px;
+    margin-top: 28px;
+}
+.car .total{
+    width:128px;
+    text-align: center;
+}
+.car .dele{
+    line-height: 80px;
+    margin-left: -1px;
+    padding: 0 10px;
+}
+.car .price_total{
+    height: 50px;
+    border: 1px solid #bcbcbc;
+    border-top: none;
+}
+.car .price_total>span{
+    display: inline-block;
+}
+.car .price_total>span.tex{
+    margin-left: 785px;
+} 
+.car .price_total input{
+    margin-top: 15px;width: 14px;height: 14px;
+}
+.move:hover{
+    cursor: pointer
+}
